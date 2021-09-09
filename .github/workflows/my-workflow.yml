@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: hello-action
-        uses: ./.github/actions/hello-world
+      # - name: hello-action
+      #   uses: ./.github/actions/hello-world
 
       - name: ha-ha
         uses: ./.github/actions/joke-action
