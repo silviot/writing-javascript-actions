@@ -1,11 +1,10 @@
+const getJoke = require("./joke");
 const core = require("@actions/core");
 
-const firstGreeting = core.getInput("first-greeting");
-const secondGreeting = core.getInput("second-greeting");
-const thirdGreeting = core.getInput("third-greeting");
-
-console.log(`Hello ${firstGreeting}`);
-console.log(`Hello ${secondGreeting}`);
-if (thirdGreeting) {
-  console.log(`Hello ${thirdGreeting}`);
+async function run() {
+  const joke = await getJoke();
+  console.log(joke);
+  core.setOutput("joke-output", joke);
 }
+
+run();
