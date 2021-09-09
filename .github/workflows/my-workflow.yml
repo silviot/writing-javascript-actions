@@ -1,11 +1,10 @@
-name: Dummy workflow
+name: JS Actions
 
-on:
-  - push
+on: [push]
 
 jobs:
-  dummy:
+  action:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - run: echo Hello world!
+      - uses: actions/checkout@v1
